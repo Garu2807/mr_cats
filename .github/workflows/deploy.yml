@@ -1,4 +1,3 @@
-# filepath: /Users/gagikarutunan/Desktop/frontend-cats-challenge/.github/workflows/deploy.yml
 name: Deploy
 
 on:
