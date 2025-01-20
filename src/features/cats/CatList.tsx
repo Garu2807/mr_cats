@@ -18,13 +18,11 @@ function CatList() {
   const isInitialMount = useRef(true);
 
   useEffect(() => {
-    console.log('Initial mount check');
     if (isInitialMount.current) {
       isInitialMount.current = false;
       return;
     }
     if (cats.length === 0) {
-      console.log('Fetching cats for the first time');
       dispatch(getCats(currentPage));
     }
   }, [dispatch, cats.length, currentPage]);
@@ -37,7 +35,6 @@ function CatList() {
           100 &&
         !fetching
       ) {
-        console.log('Fetching more cats on scroll');
         dispatch(getCats(currentPage));
       }
     };
